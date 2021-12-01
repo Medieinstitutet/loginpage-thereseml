@@ -13,7 +13,10 @@ inbtn.addEventListener ("click", function() {
     if (logname === "janne" && password === "test") {
         document.getElementById("afterinlog").style.display = "block";
         document.getElementById("beforeinlog").style.display = "none";
+        let hello = document.getElementById("hello").innerHTML = "Hej Janne!";
+        localStorage.setItem("Inloggad som:", "Janne");
         console.log("Hej Janne!");
+
     } else {
         document.getElementById("falseinlog").style.display = "block";
         console.log("fel lösenord!");
@@ -24,8 +27,15 @@ utbtn.addEventListener ("click", function(){
     document.getElementById("beforeinlog").style.display = "block";
     document.getElementById("afterinlog").style.display = "none";
     console.log("logga ut!");
-
+    localStorage.removeItem("Inloggad som:", "Janne")
 })
+
+if (localStorage.getItem("Inloggad som:", "Janne")) {
+    document.getElementById("afterinlog").style.display = "block";
+    document.getElementById("beforeinlog").style.display = "none";
+    let hello = document.getElementById("hello").innerHTML = "Hej Janne!";
+    console.log("Hej Janne!");
+} 
 
 // byta sida till inloggad
 
