@@ -11,6 +11,7 @@ inbtn.addEventListener ("click", function() {
     let password = document.getElementById("password").value;
 
     if (logname === "janne" && password === "test") {
+        // inloggad användare visar logga ut knappen
         document.getElementById("afterinlog").style.display = "block";
         document.getElementById("beforeinlog").style.display = "none";
         let hello = document.getElementById("hello").innerHTML = "Hej Janne!";
@@ -18,11 +19,12 @@ inbtn.addEventListener ("click", function() {
         console.log("Hej Janne!");
 
     } else {
+        // visa sida med felmeddelande
         document.getElementById("falseinlog").style.display = "block";
         console.log("fel lösenord!");
     }
 })
-
+// logga ut knappen
 utbtn.addEventListener ("click", function(){
     document.getElementById("beforeinlog").style.display = "block";
     document.getElementById("afterinlog").style.display = "none";
@@ -30,16 +32,11 @@ utbtn.addEventListener ("click", function(){
     localStorage.removeItem("Inloggad som:", "Janne")
 })
 
+// local storage (stannar som inloggad)
 if (localStorage.getItem("Inloggad som:", "Janne")) {
     document.getElementById("afterinlog").style.display = "block";
     document.getElementById("beforeinlog").style.display = "none";
     let hello = document.getElementById("hello").innerHTML = "Hej Janne!";
     console.log("Hej Janne!");
 } 
-
-// byta sida till inloggad
-
-// visa logga ut knappen
-
-// visa sida med felmeddelande
 
