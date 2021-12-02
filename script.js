@@ -38,5 +38,5 @@ if (localStorage.getItem("Inloggad som:", "Janne")) {
     document.getElementById("beforeinlog").style.display = "none";
     let hello = document.getElementById("hello").innerHTML = "Hej Janne!";
     console.log("Hej Janne!");
-} 
 
+} 

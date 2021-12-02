@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background-color: aqua;
+ 
 }
 
 h1 {
@@ -12,10 +12,18 @@ h1 {
 }
 
 #beforeinlog {
-    background-color: blue;
+
     padding: 10px;
     text-align: center;
 
+}
+
+article {
+    margin-top: 10rem;
+}
+
+#newbtn {
+    width: 10rem;
 }
 
 input {
@@ -31,18 +39,18 @@ button {
 }
 
 #afterinlog {
-    background-color: red;
+
     display: none;
 }
 
 #falseinlog {
-    background-color: green;
+
     display: none;
 }
 
 footer {
     text-align: center;
-    background-color: slategray;
+ 
     padding: 0.1rem;
     margin: 0px;
 }
